@@ -1,0 +1,144 @@
+.slider
+    width: 100%
+    height: 100%
+    
+    &__slide
+        position: relative
+        width: 100%
+        height: 500px
+            
+    & .slick-arrow
+        position: absolute
+        bottom: 50%
+        left: 100px
+        width: 25px
+        height: 40px
+        transform: translateY(50%)
+        font-size: 0
+        z-index: 5
+        
+        background-color: transparent 
+        
+    & .slick-arrow:before, & .slick-arrow:after
+        content: ''
+        position: absolute
+        top: 16px
+        left: 10px
+        
+        display: block
+        width: 3px
+        height: 20px
+        background-color: $white
+        transform: rotate(45deg)
+        transition: 0.4s background-color ease 
+        
+        border-radius: 1px
+        
+    & .slick-arrow:hover::before, & .slick-arrow:hover::after
+            background-color: $gold 
+        
+    & .slick-next:before, & .slick-next:after
+        right: 10px
+        left: auto
+        
+    & .slick-arrow:after
+        transform: rotate(-45deg)
+        top: 4px
+        
+    & .slick-prev:after
+        transform: rotate(-135deg)
+
+    & .slick-prev:before
+        transform: rotate(135deg)
+                
+    & .slick-next
+        left: auto
+        right: 100px
+        
+
+    & .slick-dots
+        position: absolute
+        bottom: 50px
+        left: 50%
+        transform: translateX(-50%)
+        
+        display: flex
+    
+        li
+            display: flex
+            margin-right: 20px
+        
+        button
+            font-size: 0
+            width: 15px
+            height: 15px
+            
+            border: 1px solid $gold
+            background: $white
+            border-radius: 50% 
+            
+        .slick-active
+            position: relative
+            
+            button:before
+                content: ''
+                display: block
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                
+                width: 100%
+                height: 100%
+                
+                background-color: rgba($gold, 0.6)
+                border-radius: 50%  
+
+    & .slick-slide > div
+        display: flex
+
+.slide
+    position: relative
+    height: 100%
+    text-align: center
+    
+    &__content
+        position: absolute
+        top: 50px
+        left: 20%
+        z-index: 2
+
+    
+    img
+        position: absolute
+        
+        width: 100%
+        height: 100%
+        object-fit: cover
+        
+    &__title
+        +fontRM
+        font-size: 40px
+        color: $gold
+        margin-bottom: 30px
+        text-transform: uppercase 
+        
+    &__to-order
+
+        font-size: 20px
+        color: $white
+        margin-bottom: 30px
+        text-transform: uppercase 
+        
+    &__text
+        margin-bottom: 30px
+        color: $white
+        
+    &__subtitle
+        font-size: 24px
+        color: $gold
+        text-transform: uppercase 
+        
+    &__button
+        display: flex
+        justify-content: center
