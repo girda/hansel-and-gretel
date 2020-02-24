@@ -1,0 +1,46 @@
+.cooks
+
+	&__title
+		+fontRM 
+		font-size: 30px
+		text-align: center
+
+		margin-bottom: 30px
+
+	&__item
+		width: 340px
+		margin-bottom: 30px
+
+	&__list
+		display: flex
+		justify-content: space-around
+		flex-wrap: wrap
+
+.cook
+
+	&__title
+		+fontRR 
+		font-size: 24px
+		text-align: center
+		color: $gold
+		text-transform: uppercase
+		margin-bottom: 15px
+
+	&__img
+		display: flex
+		margin-bottom: 15px
+		overflow: hidden
+
+		img
+			width: 100%
+			transition: 0.4s transform ease
+
+	&__text
+		color: $black
+		text-align: center
+
+	&:hover 
+		img
+			transform: scale(1.05)
+		.cook__title
+			text-decoration: underline

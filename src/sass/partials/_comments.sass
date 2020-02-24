@@ -1,0 +1,63 @@
+.comments
+	margin-bottom: 50px
+
+	&__title
+		+fontRM 
+		font-size: 30px
+		text-align: center
+
+		margin-bottom: 50px
+
+	&__slide
+		display: flex
+		img
+			width: 250px
+			margin: auto
+
+	& .slick-arrow
+		position: absolute
+		bottom: 50%
+		left: -40px
+		width: 25px
+		height: 40px
+		transform: translateY(50%)
+		font-size: 0
+		z-index: 5
+
+		background-color: transparent 
+	
+	& .slick-arrow:before, & .slick-arrow:after
+		content: ''
+		position: absolute
+		top: 16px
+		left: 10px
+
+		display: block
+		width: 3px
+		height: 20px
+		background-color: $gold
+		transform: rotate(45deg)
+		transition: 0.4s background-color ease 
+	
+		border-radius: 1px
+
+	& .slick-arrow:hover::before, & .slick-arrow:hover::after
+		background-color: $gold 
+
+	& .slick-next:before, & .slick-next:after
+		right: 10px
+		left: auto
+
+	& .slick-arrow:after
+		transform: rotate(-45deg)
+		top: 4px
+
+	& .slick-prev:after
+		transform: rotate(-135deg)
+
+	& .slick-prev:before
+		transform: rotate(135deg)
+
+	& .slick-next
+		left: auto
+		right: -40px

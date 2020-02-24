@@ -8,8 +8,8 @@ title: Hansel&Gretel
 {% include "layouts/_header.html" %}
 <main class="main">
 
-	<div class="main__slider">
-		<div class="slider">	
+	<div class="main__hero">
+		<div class="slider js-hero-slider">	
 			<div class="slider__slide">
 				<div class="slide">
 					<div class="slide__content">
@@ -66,146 +66,125 @@ title: Hansel&Gretel
 
 	</div>
 
+	
 	<div class="container">
-		<p class="main__preview js-preview-animate">Наші чіз-кейки взяли все найкраще від «класичного» чіз-кейку, а саме: свіжий крем-сир вищої якості, натуральні спеції, йогурт і ще кілька секретних інгредієнтів. Щоб зробити наші чіз-кейки унікальни, ми додали до ніжного крем-сиру соковиті желе з шматочками фруктів, ягод та ароматних спецій.  Ви можете вибрати вишневий чіз-кейк з бадьяном та шоколадними крихтами, або соковитий чіз-кейк з ананасом, яблуком та лаймом без цукру.</p>
+		<div class="main__title">
+			<h2>Авторська кондитерська <span>Hansel & Gretel</span></h2>
+			<div class="main__title-img"><img src="./img/logo-2.png" alt="Логотип"></div>
+		</div>
+
+		<h3 class="main__subtitle">Готуємо вишукані, стильні десерти для ваших особливих подій.</h3>
+
+		<p class="main__text">Всі фото на сайті — з нашими виробами!</p>
+		<p class="main__text"><span>Hansel & Gretel</span> — кондитерська від щирого серця. Ми хочемо донести до вас світові тенденції та секрети смаків з усіх куточків планети. Тут ви зможете знайти нові улюблені смаки, зроблені з любов’ю та турботою.</p>
+		<p class="main__text"><span>Hansel & Gretel</span> — це наша пристрасть і ми дуже хочемо поділитися своїм захопленням з вами. Подаруйте емоції собі та своїм близьким.</p>
+		<div class="line">{{mixins.icon('macaron')}}</div>
+
+		<div class="cooks">
+			<h3 class="cooks__title">Що ми готуємо?</h3>
+
+			<div class="cooks__list">
+				<div class="cooks__item">
+					<a href="#" class="cook">
+						<div class="cook__img"><img src="./img/cook1.jpg" alt="Торти"></div>
+						<h4 class="cook__title">Торти</h4>
+						<p class="cook__text">Неперевершені торти для особливих подій</p>
+					</a>
+				</div>
+
+				<div class="cooks__item">
+					<a href="#" class="cook">
+						<div class="cook__img"><img src="./img/cook2.jpg" alt="Торти"></div>
+						<h4 class="cook__title">Mакарони</h4>
+						<p class="cook__text">Вишукані французькі тістечка в асортименті</p>
+					</a>
+				</div>
+
+				<div class="cooks__item">
+					<a href="#" class="cook">
+						<div class="cook__img"><img src="./img/cook3.jpg" alt="Торти"></div>
+						<h4 class="cook__title">Цукерки</h4>
+						<p class="cook__text">Вишукані цукерки ручноі роботи</p>
+					</a>
+				</div>
+
+				<div class="cooks__item">
+					<a href="#" class="cook">
+						<div class="cook__img"><img src="./img/cook4.jpg" alt="Торти"></div>
+						<h4 class="cook__title">Чіз-кейки</h4>
+						<p class="cook__text">Наші чіз-кейки взяли все найкраще від «класичного» чіз-кейку</p>
+					</a>
+				</div>
+
+				<div class="cooks__item">
+					<a href="#" class="cook">
+						<div class="cook__img"><img src="./img/cook5.jpg" alt="Торти"></div>
+						<h4 class="cook__title">Весільні торти</h4>
+						<p class="cook__text">Ми робимо десерти з індивідуальним дизайном для будь-якого заходу та святкового столу</p>
+					</a>
+				</div>
+			</div>
+		</div>
+
 		
 	</div>
 
+	<div class="features">
+		<div class="container">
+			<h3 class="features__title">У чому наш секрет?</h3>
+			<p class="features__subtitle">Одного разу спробувавши наші десерти, ви знову за ними повернетеся. Магія? Трошки. А ще:</p>
+			<div class="features__list">
+				<div class="features__item">
+					<div class="features__icon"><img src="./img/feature1.png" alt=""></div>
+					<p class="features__text">Ми доводимо рецептуру до досконалості, щоб ви могли спробувати відразу кілька макарон, цукерку і ще шматочок торта, і при цьому не відчувати тягар.</p>
+				</div>
 
-	
-	<div class="container">
-		<div class="js-products-animate">
-			<div class="product">
-				<div class="product__inner">
-					<div class="product__image" style="background-image: url('./img/hiclipart.png');"></div>
+				<div class="features__item">
+					<div class="features__icon"><img src="./img/feature2.png" alt=""></div>
+					<p class="features__text">Всі десерти мають сертифікати якості і створюються тільки з натуральних продуктів: свіже масло, молоко, яйця, справжні французькі вершки, найкращий бельгійський шоколад.</p>
+				</div>
 
-					<div class="product__content">
-						<h3 class="product__title">
-							<div class="product__title-top">{{mixins.icon('macaron')}}</div>
-							ЧІЗ-КЕЙК АНАНАС-ЯБЛУКО-ЛАЙМ
-						</h3>
-						<div class="product__preview">Мигдальне сабле з родзинками, лаймовий чіз, яблучно-ананасове желе. Без цукру.</div>
-						<div class="product__price">800 <span>грн</span></div>
-
-						<div class="product__buttons">
-							<div class="counter">
-								<div class="counter__title">вага</div>
-
-								<div class="counter__inner">
-									<button class="counter__button">-</button>
-									<input type="text" value="1">
-									<button class="counter__button counter__button--reverse">+</button>
-								</div>
-							</div>
-
-							<a href="#" class="button">Замовити</a>
-							<button class="button button--inverse">Задати запитаня</button>
-						</div>
-
-						<div class="product__text">За бажанням замовника кольори глазурi i крему можуть змiнюватися (без доплати). Зміна декору торта оплачується <b>ДОДАТКОВО</b> (обговорюється на етапі замовлення)</div>
-					</div>
+				<div class="features__item">
+					<div class="features__icon"><img src="./img/feature3.png" alt=""></div>
+					<p class="features__text">Наша кондитерська - справа всього життя. Кожен десерт ми готуємо вручну, а кожен клієнт для нас особливий. Ваш захват - наша залежність.</p>
 				</div>
 			</div>
-
-			<div class="product">
-				<div class="product__inner">
-					<div class="product__image" style="background-image: url('./img/hiclipart.png');"></div>
-
-					<div class="product__content">
-						<h3 class="product__title">
-							<div class="product__title-top">{{mixins.icon('macaron')}}</div>
-							ЧІЗ-КЕЙК АНАНАС-ЯБЛУКО-ЛАЙМ
-						</h3>
-						<div class="product__preview">Мигдальне сабле з родзинками, лаймовий чіз, яблучно-ананасове желе. Без цукру.</div>
-						<div class="product__price">800 <span>грн</span></div>
-
-						<div class="product__buttons">
-							<div class="counter">
-								<div class="counter__title">вага</div>
-
-								<div class="counter__inner">
-									<button class="counter__button">-</button>
-									<input type="text" value="1">
-									<button class="counter__button counter__button--reverse">+</button>
-								</div>
-							</div>
-
-							<a href="#" class="button">Замовити</a>
-							<button class="button button--inverse">Задати запитаня</button>
-						</div>
-
-						<div class="product__text">За бажанням замовника кольори глазурi i крему можуть змiнюватися (без доплати). Зміна декору торта оплачується <b>ДОДАТКОВО</b> (обговорюється на етапі замовлення)</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="product">
-				<div class="product__inner">
-					<div class="product__image" style="background-image: url('./img/hiclipart.png');"></div>
-
-					<div class="product__content">
-						<h3 class="product__title">
-							<div class="product__title-top">{{mixins.icon('macaron')}}</div>
-							ЧІЗ-КЕЙК АНАНАС-ЯБЛУКО-ЛАЙМ
-						</h3>
-						<div class="product__preview">Мигдальне сабле з родзинками, лаймовий чіз, яблучно-ананасове желе. Без цукру.</div>
-						<div class="product__price">800 <span>грн</span></div>
-
-						<div class="product__buttons">
-							<div class="counter">
-								<div class="counter__title">вага</div>
-
-								<div class="counter__inner">
-									<button class="counter__button">-</button>
-									<input type="text" value="1">
-									<button class="counter__button counter__button--reverse">+</button>
-								</div>
-							</div>
-
-							<a href="#" class="button">Замовити</a>
-							<button class="button button--inverse">Задати запитаня</button>
-						</div>
-
-						<div class="product__text">За бажанням замовника кольори глазурi i крему можуть змiнюватися (без доплати). Зміна декору торта оплачується <b>ДОДАТКОВО</b> (обговорюється на етапі замовлення)</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="product">
-				<div class="product__inner">
-					<div class="product__image" style="background-image: url('./img/hiclipart.png');"></div>
-
-					<div class="product__content">
-						<h3 class="product__title">
-							<div class="product__title-top">{{mixins.icon('macaron')}}</div>
-							ЧІЗ-КЕЙК АНАНАС-ЯБЛУКО-ЛАЙМ
-						</h3>
-						<div class="product__preview">Мигдальне сабле з родзинками, лаймовий чіз, яблучно-ананасове желе. Без цукру.</div>
-						<div class="product__price">800 <span>грн</span></div>
-
-						<div class="product__buttons">
-							<div class="counter">
-								<div class="counter__title">вага</div>
-
-								<div class="counter__inner">
-									<button class="counter__button">-</button>
-									<input type="text" value="1">
-									<button class="counter__button counter__button--reverse">+</button>
-								</div>
-							</div>
-
-							<a href="#" class="button">Замовити</a>
-							<button class="button button--inverse">Задати запитаня</button>
-						</div>
-
-						<div class="product__text">За бажанням замовника кольори глазурi i крему можуть змiнюватися (без доплати). Зміна декору торта оплачується <b>ДОДАТКОВО</b> (обговорюється на етапі замовлення)</div>
-					</div>
-				</div>
-			</div>
-
 		</div>
 	</div>
+	
+	<div class="container">
+		<div class="comments">
+			<div class="container">
+				<div class="comments__title">Клієнти про наші торти та десерти</div>
 
+				<div class="comments__slider js-comments-slider">
+					<div class="comments__slide"><img src="./img/comment1.jpg" alt=""></div>
+					<div class="comments__slide"><img src="./img/comment2.jpg" alt=""></div>
+					<div class="comments__slide"><img src="./img/comment1.jpg" alt=""></div>
+					<div class="comments__slide"><img src="./img/comment2.jpg" alt=""></div>
+					<div class="comments__slide"><img src="./img/comment1.jpg" alt=""></div>
+					<div class="comments__slide"><img src="./img/comment2.jpg" alt=""></div>
+					<div class="comments__slide"><img src="./img/comment1.jpg" alt=""></div>
+					<div class="comments__slide"><img src="./img/comment2.jpg" alt=""></div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<div class="line">{{mixins.icon('macaron')}}</div>
+
+		<div class="photos">
+			<h3 class="photos__title">Фото з <a href="#">Instagram</a></h3>
+
+			<div class="photos__list">
+				<div class="photos__item">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
 
 
 

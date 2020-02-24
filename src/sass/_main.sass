@@ -1,7 +1,8 @@
 body
     +fontRR
-    font-size: 16px
+    font-size: 18px
     line-height: 1.4
+    color: $black
     
 a
     text-decoration: none
@@ -32,13 +33,93 @@ a
     &--bottom
         top: auto
         bottom: 0
+.line
+    position: relative
+    display: flex
+    justify-content: center
+    
+    width: 100%
+
+    margin-bottom: 20px
+    
+    svg
+        width: 50px
+        height: 50px
         
+        fill: $black
+        
+    &:before, &:after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        
+        width: 45%
+        height: 1px
+        
+        background-color: $black 
+        
+    &:after
+        left: auto
+        right: 0
 .main
 
     &__preview
         margin-bottom: 50px
         
-    &__slider
+    &__hero
         margin-bottom: 50px
+
+    &__title
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+        height: 140px
+
+        margin-bottom: 30px
+
+        background: $black url('../img/cake.png') no-repeat top 50% left 50px
+        background-size: 120px
+
+        h2
+            +fontRR
+            font-size: 30px
+            color: $white
+            span 
+                +fontRM
+
+        &-img
+            position: absolute
+            right: 50px
+            top: -20px
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 180px
+            height: 180px
+
+            background-color: $white
+            border-radius: 50%
+            box-shadow: 0 5px 10px 0px $black
+            img
+                width: 80%
+                height: 80%
         
+    &__subtitle
+        +fontRM
+        font-size: 28px
+        text-align: center
+
+        margin-bottom: 20px
     
+    &__text
+        margin-bottom: 20px
+
+        text-align: center
+
+        span 
+            +fontRM
+            font-size: 24px
+            color: $gold

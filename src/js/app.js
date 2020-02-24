@@ -3,6 +3,10 @@ import slick from 'slick-carousel';
 
 animation();
 
-$('.slider').slick({
+$('.js-hero-slider').slick({
   dots: true
+});
+
+$('.js-comments-slider').slick({
+  slidesToShow: 4
 });
