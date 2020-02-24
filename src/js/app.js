@@ -4,7 +4,11 @@ import slick from 'slick-carousel';
 animation();
 
 $('.js-hero-slider').slick({
-  dots: true
+  dots: true,
+  autoplay: true,
+  autoplaySpeed: 4000,
+  fade: true,
+  cssEase: 'linear'
 });
 
 $('.js-comments-slider').slick({
