@@ -1,5 +1,3 @@
-import Product from '../classes/product';
-
 export default function() {
   const product = document.querySelectorAll('.js-product');
 
@@ -29,25 +27,6 @@ export default function() {
       const counterBtn = counter.querySelectorAll('button');
       const counterStep = counter.getAttribute('step');
       const counterTotal = counter.querySelector('input');
-
-      const param = {
-        btnNext: counterBtnNext,
-        btnPrev: counterBtnPrev,
-        step: counterStep,
-        price: price.getAttribute('price'),
-        elementPrice: price
-      };
-
-      const orderProduct = new Product(param);
-
-
-
-
-
-
-
-
-
 
       btnAddProduct.addEventListener('click', (e) => {
         e.preventDefault();
@@ -111,7 +90,7 @@ export default function() {
       const selectProduct = prd.querySelector('select');
 
       selectProduct.addEventListener('change', () => {
-        
+
         switch(+selectProduct.value) {
           case 6:
             price.innerHTML = priceStep * 6;
