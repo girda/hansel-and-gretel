@@ -2,6 +2,27 @@
 title: 'Чіз-кейки'
 cheesecakes: 'is-active'
 heroImg: 'cake.png'
+
+products: [
+    {
+        title: 'Макарон — малина',
+        preview: '35 грн/шт. Мінімальне замовлення 6 шт.',
+        price: '800',
+        imgUrl: 'macarons.png'
+    },
+    {
+        title: 'Макарон — ваніль',
+        preview: '35 грн/шт. Мінімальне замовлення 6 шт.',
+        price: '800',
+        imgUrl: 'macarons.png'
+    },
+    {
+        title: 'Макарон — маракуя',
+        preview: '35 грн/шт. Мінімальне замовлення 6 шт.',
+        price: '800',
+        imgUrl: 'macarons.png'
+    }
+]
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -20,17 +41,19 @@ heroImg: 'cake.png'
     
     <div class="container">
         <div class="js-products-animate">
-            <form class="product js-product">
+
+            {% for product in products %}
+            <form class="product js-product" data-price="{{product.price}}">
                 <div class="product__inner">
-                    <div class="product__image" style="background-image: url('./img/macarons.png');"></div>
+                    <div class="product__image" style="background-image: url('./img/{{product.imgUrl}}');"></div>
 
                     <div class="product__content">
                         <h3 class="product__title">
                             <div class="product__title-top">{{mixins.icon('macaron')}}</div>
-                            <span class="js-product-name">Макарон — малина</span>
+                            <span name-product>{{product.title}}</span>
                         </h3>
-                        <div class="product__preview">35 грн/шт. Мінімальне замовлення 6 шт.</div>
-                        <div class="product__price"><span class="js-product-price" price="800">800</span> <span>грн</span></div>
+                        <div class="product__preview">{{product.preview}}</div>
+                        <div class="product__price"><span price>{{product.price}}</span> <span>грн</span></div>
 
                         <div class="product__buttons">
                             <div class="counter js-counter" data-step="0.25">
@@ -38,12 +61,12 @@ heroImg: 'cake.png'
 
                                 <div class="counter__inner">
                                     <button type="button" class="counter__button" data="down">-</button>
-                                    <input type="text" value="1">
+                                    <input type="text" value="1" quantity>
                                     <button type="button" class="counter__button counter__button--reverse" data="up">+</button>
                                 </div>
                             </div>
 
-                            <a href="#" class="button" type="submit">Замовити</a>
+                            <button class="button" type="submit">Замовити</button>
                             <button type="button" class="button button--inverse">Задати запитаня</button>
                         </div>
 
@@ -51,70 +74,7 @@ heroImg: 'cake.png'
                     </div>
                 </div>
             </form>
-
-             <form class="product js-product">
-                <div class="product__inner">
-                    <div class="product__image" style="background-image: url('./img/macarons.png');"></div>
-
-                    <div class="product__content">
-                        <h3 class="product__title">
-                            <div class="product__title-top">{{mixins.icon('macaron')}}</div>
-                            <span class="js-product-name">Макарон — ваніль</span>
-                        </h3>
-                        <div class="product__preview">35 грн/шт. Мінімальне замовлення 6 шт.</div>
-                        <div class="product__price"><span class="js-product-price" price="500">500</span> <span>грн</span></div>
-
-                        <div class="product__buttons">
-                            <div class="counter js-counter" data-step="0.25">
-                                <div class="counter__title">вага</div>
-
-                                <div class="counter__inner">
-                                    <button type="button" class="counter__button" data="down">-</button>
-                                    <input type="text" value="1">
-                                    <button type="button" class="counter__button counter__button--reverse" data="up">+</button>
-                                </div>
-                            </div>
-
-                            <a href="#" class="button" type="submit">Замовити</a>
-                            <button type="button" class="button button--inverse">Задати запитаня</button>
-                        </div>
-
-                        <div class="product__text">За бажанням замовника кольори глазурi i крему можуть змiнюватися (без доплати). Зміна декору торта оплачується <b>ДОДАТКОВО</b> (обговорюється на етапі замовлення)</div>
-                    </div>
-                </div>
-            </form>
-
-             <form class="product js-product">
-                <div class="product__inner">
-                    <div class="product__image" style="background-image: url('./img/macarons.png');"></div>
-
-                    <div class="product__content">
-                        <h3 class="product__title">
-                            <div class="product__title-top">{{mixins.icon('macaron')}}</div>
-                            <span class="js-product-name">Макарон — маракуя</span>
-                        </h3>
-                        <div class="product__preview">35 грн/шт. Мінімальне замовлення 6 шт.</div>
-                        <div class="product__price"><span class="js-product-price" price="600">600</span> <span>грн</span></div>
-
-                        <div class="product__buttons">
-                            <div class="counter js-counter" data-step="0.25">
-                                <div class="counter__title">вага</div>
-
-                                <div class="counter__inner">
-                                    <button type="button" class="counter__button" data="down">-</button>
-                                    <input type="text" value="1">
-                                    <button type="button" class="counter__button counter__button--reverse" data="up">+</button>
-                                </div>
-                            </div>
-
-                            <a href="#" class="button" type="submit">Замовити</a>
-                            <button type="button" class="button button--inverse">Задати запитаня</button>
-                        </div>
-
-                        <div class="product__text">За бажанням замовника кольори глазурi i крему можуть змiнюватися (без доплати). Зміна декору торта оплачується <b>ДОДАТКОВО</b> (обговорюється на етапі замовлення)</div>
-                    </div>
-                </div>
-            </form>
+            {% endfor %}
 
         </div>
     </div>

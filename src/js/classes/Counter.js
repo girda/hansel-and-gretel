@@ -14,15 +14,18 @@ export default class Counter {
   onChange() {
     this.btns.forEach(btn => {
       btn.addEventListener('click', () => {
-        console.log(this.total);
-        console.log(this.defaulValue);
-        console.log(this.step);
+  
         if (btn.getAttribute('data') === 'up') {
           this.total += this.step;
         } else if (btn.getAttribute('data') === 'down' && this.total > this.step) {
           this.total -= this.step;
         }
         this.input.value = this.total;
+        
+        // создаем собыбите change на input`e
+        const changeEvent = new Event('change');
+        this.input.dispatchEvent(changeEvent);
+
       });
     });
   }

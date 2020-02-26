@@ -3,11 +3,11 @@ export default class Bag {
 
   }
 
-  getData(name) {
-    return localStorage.getItem(name);
+  getData(name) { // name String
+    return localStorage.getItem(name); // return String
   }
 
-  setData(name, data) {
+  setData(name, data) { // name String, data String
     localStorage.setItem(name, data);
   }
 }

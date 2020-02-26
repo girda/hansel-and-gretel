@@ -1,5 +1,5 @@
 import animation from './components/animation.js';
-import slick from 'slick-carousel';
+import 'slick-carousel';
 import order from './components/order';
 import Counter from './classes/Counter';
 import Bag from './classes/Bag';
@@ -22,6 +22,6 @@ $('.js-comments-slider').slick({
   slidesToShow: 4
 });
 
-// order();
+order();
 
 
