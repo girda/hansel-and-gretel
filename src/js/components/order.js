@@ -1,3 +1,5 @@
+import Product from '../classes/product';
+
 export default function() {
   const product = document.querySelectorAll('.js-product');
 
@@ -22,9 +24,30 @@ export default function() {
       const btnAddProduct = prd.querySelector('[type="submit"]');
       const nameProduct = prd.querySelector('.js-product-name').innerHTML;
       const counter = prd.querySelector('.js-counter');
+      const counterBtnPrev = counter.querySelector('button[data="prev"]');
+      const counterBtnNext = counter.querySelector('button[data="next"]');
       const counterBtn = counter.querySelectorAll('button');
       const counterStep = counter.getAttribute('step');
       const counterTotal = counter.querySelector('input');
+
+      const param = {
+        btnNext: counterBtnNext,
+        btnPrev: counterBtnPrev,
+        step: counterStep,
+        price: price.getAttribute('price'),
+        elementPrice: price
+      };
+
+      const orderProduct = new Product(param);
+
+
+
+
+
+
+
+
+
 
       btnAddProduct.addEventListener('click', (e) => {
         e.preventDefault();
@@ -82,12 +105,27 @@ export default function() {
   const orderSelect = () => {
     product.forEach(prd => {
       const price = prd.querySelector('.js-product-price');
+      const priceStep = +prd.querySelector('.js-product-price').getAttribute('price');
       const btnAddProduct = prd.querySelector('[type="submit"]');
       const nameProduct = prd.querySelector('.js-product-name').innerHTML;
       const selectProduct = prd.querySelector('select');
 
       selectProduct.addEventListener('change', () => {
-        console.log(selectProduct.value);
+        
+        switch(+selectProduct.value) {
+          case 6:
+            price.innerHTML = priceStep * 6;
+            break;
+          case 12:
+            price.innerHTML = priceStep * 12;
+            break;
+          case 18:
+            price.innerHTML = priceStep * 18;
+            break;
+          case 24:
+            price.innerHTML = priceStep * 24;
+            break;
+        }
       });
     });
   };
