@@ -2,6 +2,27 @@
 title: 'Макарони'
 macarons: 'is-active'
 heroImg: 'macarons.png'
+
+products: [
+    {
+        title: 'Макарон — малина',
+        preview: '35 грн/шт. Мінімальне замовлення 6 шт.',
+        price: 35,
+        imgUrl: 'macarons.png'
+    },
+    {
+        title: 'Макарон — ваніль',
+        preview: '35 грн/шт. Мінімальне замовлення 6 шт.',
+        price: 35,
+        imgUrl: 'macarons.png'
+    },
+    {
+        title: 'Макарон — маракуя',
+        preview: '35 грн/шт. Мінімальне замовлення 6 шт.',
+        price: 35,
+        imgUrl: 'macarons.png'
+    }
+]
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -24,93 +45,38 @@ heroImg: 'macarons.png'
     
     <div class="container">
         <div class="js-products-animate">
-            <form class="product js-product">
+            {% for product in products %}
+            <form class="product js-product" data-price="{{product.price}}">
                 <div class="product__inner">
-                    <div class="product__image" style="background-image: url('./img/macarons.png');"></div>
+                    <div class="product__image" style="background-image: url('./img/{{product.imgUrl}}');"></div>
 
                     <div class="product__content">
                         <h3 class="product__title">
                             <div class="product__title-top">{{mixins.icon('macaron')}}</div>
-                            <span class="js-product-name">Макарон — малина</span>
+                            <span name-product>{{product.title}}</span>
                         </h3>
-                        <div class="product__preview">35 грн/шт. Мінімальне замовлення 6 шт.</div>
-                        <div class="product__price"><span class="js-product-price" price="35">210</span> <span>грн</span></div>
+                        <div class="product__preview">{{product.preview}}</div>
+                        <div class="product__price"><span price>{{product.price * 6}}</span> <span>грн</span></div>
 
                         <div class="product__buttons">
  
-                            <select>
+                            <select quantity>
                                 <option value="6">6 штук</option>
                                 <option value="12">12 штук</option>
                                 <option value="18">18 штук</option>
                                 <option value="24">24 штуки</option>
                             </select>
 
-                            <a href="#" class="button" type="submit">Замовити</a>
+                            <button class="button" type="submit">Замовити</button>
                             <button type="button" class="button button--inverse">Задати запитаня</button>
                         </div>
 
                     </div>
                 </div>
             </form>
+            {% endfor %}
 
-             <form class="product js-product">
-                <div class="product__inner">
-                    <div class="product__image" style="background-image: url('./img/macarons.png');"></div>
-
-                    <div class="product__content">
-                        <h3 class="product__title">
-                            <div class="product__title-top">{{mixins.icon('macaron')}}</div>
-                            <span class="js-product-name">Макарон — ваніль</span>
-                        </h3>
-                        <div class="product__preview">35 грн/шт. Мінімальне замовлення 6 шт.</div>
-                        <div class="product__price"><span class="js-product-price" price="35">210</span> <span>грн</span></div>
-
-                        <div class="product__buttons">
- 
-                            <select>
-                                <option value="6">6 штук</option>
-                                <option value="12">12 штук</option>
-                                <option value="18">18 штук</option>
-                                <option value="24">24 штуки</option>
-                            </select>
-
-                            <a href="#" class="button" type="submit">Замовити</a>
-                            <button type="button" class="button button--inverse">Задати запитаня</button>
-                        </div>
-
-                    </div>
-                </div>
-            </form>
-
-             <form class="product js-product">
-                <div class="product__inner">
-                    <div class="product__image" style="background-image: url('./img/macarons.png');"></div>
-
-                    <div class="product__content">
-                        <h3 class="product__title">
-                            <div class="product__title-top">{{mixins.icon('macaron')}}</div>
-                            <span class="js-product-name">Макарон — маракуя</span>
-                        </h3>
-                        <div class="product__preview">35 грн/шт. Мінімальне замовлення 6 шт.</div>
-                        <div class="product__price"><span class="js-product-price" price="35">210</span> <span>грн</span></div>
-
-                        <div class="product__buttons">
- 
-                            <select>
-                                <option value="6">6 штук</option>
-                                <option value="12">12 штук</option>
-                                <option value="18">18 штук</option>
-                                <option value="24">24 штуки</option>
-                            </select>
-
-                            <a href="#" class="button" type="submit">Замовити</a>
-                            <button type="button" class="button button--inverse">Задати запитаня</button>
-                        </div>
-
-                    </div>
-                </div>
-            </form>
-
+             
         </div>
     </div>
 
