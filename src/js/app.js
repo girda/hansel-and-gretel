@@ -24,4 +24,13 @@ $('.js-comments-slider').slick({
 
 order();
 
+const orderLength = bag.returnLength('orders');
+const elementBag = document.querySelector('.js-bag');
+const elementBagLength = elementBag.querySelector('span');
+
+if (orderLength) {
+  elementBagLength.classList.add('is-show');
+  elementBagLength.innerHTML = orderLength;
+}
+console.log(orderLength);
 

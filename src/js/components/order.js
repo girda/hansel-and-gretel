@@ -1,4 +1,4 @@
-import Order from '../classes/Order';
+import Order from '../classes/Product';
 
 export default function() {
   const products = document.querySelectorAll('.js-product');
@@ -9,7 +9,7 @@ export default function() {
     product.addEventListener('submit', (e) => {
       e.preventDefault();
       order.submit();
-      
+
     });
   });
 }

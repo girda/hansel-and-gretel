@@ -1,4 +1,4 @@
-export default class Order {
+export default class Product {
   constructor(product) {
     this.product = product;
     this.productName = product.querySelector('[name-product]').innerHTML;
@@ -26,7 +26,7 @@ export default class Order {
 
       let candidate = null;
       console.log(orders);
-      
+
       for (let i = 0; i < orders.list.length; i++) {
         const order = orders.list[i];
         for (let key in order) {
@@ -54,7 +54,7 @@ export default class Order {
       };
       bag.setData('orders', JSON.stringify(orders));
     }
-    
+
   }
 
 }

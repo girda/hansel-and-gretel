@@ -10,4 +10,9 @@ export default class Bag {
   setData(name, data) { // name String, data String
     localStorage.setItem(name, data);
   }
+
+  returnLength(name) {
+    return this.getData(name) ? JSON.parse(this.getData(name)).list.length : null;
+
+  }
 }
