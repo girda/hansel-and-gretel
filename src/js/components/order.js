@@ -9,7 +9,7 @@ export default function() {
     product.addEventListener('submit', (e) => {
       e.preventDefault();
       order.submit();
-      
+
     });
   });
 }
