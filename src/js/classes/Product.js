@@ -26,16 +26,16 @@ export default class Product {
 
       let candidate = null;
       console.log(orders);
-
-      for (let i = 0; i < orders.list.length; i++) {
-        const order = orders.list[i];
-        for (let key in order) {
-          if (key === 'name' && order[key] === currentOrder.name ) {
-            candidate = order;
-            break;
-          }
-        }
-      }
+      
+      // for (let i = 0; i < orders.list.length; i++) {
+      //   const order = orders.list[i];
+      //   for (let key in order) {
+      //     if (key === 'name' && order[key] === currentOrder.name ) {
+      //       candidate = order;
+      //       break;
+      //     }
+      //   }
+      // }
 
       if (candidate) {
         candidate.price = +candidate.price + +currentOrder.price;
@@ -54,6 +54,8 @@ export default class Product {
       };
       bag.setData('orders', JSON.stringify(orders));
     }
+
+    bag.updateLength('orders');
 
   }
 

@@ -1,0 +1,48 @@
+---
+title: Кошик
+heroImg: 'cake.png'
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "layouts/_header.html" %}
+
+{% include "partials/_hero.html" %}
+<main class="main">
+
+    <div class="container">
+        
+        <div class="products">
+            <div class="product-bag js-product-bag">
+                <button type="button" class="product-bag__remove">remove</button>
+                <div class="product-bag__img"><img src="" alt=""></div>
+                <div class="product-bag__content">
+                    <div class="product-bag__title"></div>
+                    <div class="product-bag__quantity"></div>
+                    <div class="product-bag__price"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+{% include "layouts/_footer.html" %}
+
+
+
+    <!-- {# mixin example #}
+    {{mixins.icon('facebook')}}
+
+
+    {# data usage example #}
+        {% import "data/data.html" as tests %}
+        
+        {% for test in tests.list %}
+        <li>{{test.title}}</li>
+        {% endfor %}
+        {# end of example #} -->
+
+        {% endblock %}
