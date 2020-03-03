@@ -55,6 +55,8 @@ export default class Product {
       bag.setData('orders', JSON.stringify(orders));
     }
 
+    bag.updateLength('orders');
+
   }
 
 }

@@ -4,7 +4,9 @@ import order from './components/order';
 import Counter from './classes/Counter';
 import Bag from './classes/Bag';
 
-window.bag = new Bag();
+const elementBag = document.querySelector('.js-bag');
+window.bag = new Bag(elementBag);
+bag.updateLength('orders');
 const counters = document.querySelectorAll('.js-counter');
 counters.forEach(counter => new Counter(counter));
 
@@ -24,13 +26,4 @@ $('.js-comments-slider').slick({
 
 order();
 
-const orderLength = bag.returnLength('orders');
-const elementBag = document.querySelector('.js-bag');
-const elementBagLength = elementBag.querySelector('span');
-
-if (orderLength) {
-  elementBagLength.classList.add('is-show');
-  elementBagLength.innerHTML = orderLength;
-}
-console.log(orderLength);
 
