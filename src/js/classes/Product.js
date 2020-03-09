@@ -3,6 +3,7 @@ export default class Product {
     this.product = product;
     this.productName = product.querySelector('[name-product]').innerHTML;
     this.price = this.product.getAttribute('data-price');
+    this.weight = this.product.getAttribute('data-weight');
     this.elementPrice = this.product.querySelector('[price]');
     this.quantity = this.product.querySelector('[quantity]');
     this.onChange();
@@ -20,7 +21,13 @@ export default class Product {
   submit() {
 
     let orders = JSON.parse(bag.getData('orders'));
-    const currentOrder = {name: this.productName, price: `${+this.price * +this.quantity.value}`, quantity: this.quantity.value};
+    const currentOrder = {
+      title: this.productName, 
+      price: `${+this.price * +this.quantity.value}`, 
+      quantity: this.quantity.value, 
+      imgUrl: './img/cake.png',
+      weight: this.weight
+    };
 
     if (orders !== null ) {
 

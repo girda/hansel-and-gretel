@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Про кондитерську</title>
+    <title>Кошик</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fff" />
@@ -22,7 +22,7 @@
               </a>
               <ul class="main-nav__list">
                 <li class="main-nav__item">
-                  <a href="./about-me.html" class="main-nav__link is-active">Про кондитерську</a>
+                  <a href="./about-me.html" class="main-nav__link ">Про кондитерську</a>
                 </li>
                 <li class="main-nav__item">
                   <a href="#" class="main-nav__link ">Авторські торти</a>
@@ -95,50 +95,36 @@
 </div> -->
               <div class="hero__media"><img src="./img/cake.png" alt="Cake" width="360"></div>
             </div>
-            <h1 class="hero__title">Про кондитерську</h1>
+            <h1 class="hero__title">Кошик</h1>
           </div>
         </div>
       </div>
       <main class="main">
         <div class="container">
-          <div class="main__title">
-            <h2>Авторська кондитерська <span>Hansel & Gretel</span></h2>
-            <div class="main__title-img"><img src="./img/logo-2.png" alt="Логотип"></div>
-          </div>
-          <p class="main__text">Коли любов до своєї справи виходить за рамки буденної роботи, ти розумієш, що створення своєї власної онлайн-кондитерської це саме те, куди ти хочеш віддати цю любов.</p>
-          <p class="main__text">Втілити весь досвід, отриманий у найпопулярніших ресторанах Києва та використати знання, отримані від найкращих українських та світових Шеф-кондитерів рівня зірок Мішлен.</p>
-          <div class="line">
-            <svg class="icon icon-macaron">
-              <use xlink:href="img/sprite.svg#icon-macaron"></use>
-            </svg>
-          </div>
-          <div class="photos">
-            <h3 class="photos__title">Фото з <a href="#">Instagram</a></h3>
-            <div class="photos__list">
-              <a href="#" class="photos__item">
-                <img src="./img/photo1.jpg" alt="">
-              </a>
-              <div class="photos__wrap">
-                <a href="#" class="photos__item">
-                  <img src="./img/photo2.jpg" alt="">
-                </a>
-                <a href="#" class="photos__item">
-                  <img src="./img/photo1.jpg" alt="">
-                </a>
-              </div>
-              <a href="#" class="photos__item">
-                <img src="./img/photo2.jpg" alt="">
-              </a>
-              <div class="photos__wrap">
-                <a href="#" class="photos__item">
-                  <img src="./img/photo2.jpg" alt="">
-                </a>
-                <a href="#" class="photos__item">
-                  <img src="./img/photo1.jpg" alt="">
-                </a>
+          <form class="orders js-orders-form">
+            <h2 class="orders__title">Обранi смаколики</h2>
+            <div class="products-bag js-products-bag"></div>
+            <div class="orders__total">Усього товарів: <span total></span> <span>грн.</span></div>
+            <div class="orders__btn">
+              <button type="button" class="button" open-popup>Замовити</button>
+            </div>
+            <div class="orders__popup">
+              <div class="js-popup popup" orders-form>
+                <button class="popup__close" type="button" popup-close>close</button>
+                <div class="popup__content">
+                  <div class="orders__form">
+                    <label for="name">Ваше им'я</label>
+                    <input type="text" name="name" id="name">
+                    <label for="phone">Ваше им'я</label>
+                    <input type="tel" name="phone" id="phone">
+                    <label for="name">Коментар</label>
+                    <textarea name="comment" id="" cols="30" rows="10"></textarea>
+                    <button type="submit" class="button">Замовити</button>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </main>
       <footer class="footer">

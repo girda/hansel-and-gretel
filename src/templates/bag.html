@@ -1,0 +1,73 @@
+---
+title: Кошик
+heroImg: 'cake.png'
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{% include "layouts/_header.html" %}
+
+{% include "partials/_hero.html" %}
+<main class="main">
+
+    <div class="container">
+        
+        <form class="orders js-orders-form">
+
+            <h2 class="orders__title">Обранi смаколики</h2>
+
+            <div class="products-bag js-products-bag"></div>
+
+
+            <div class="orders__total">Усього товарів: <span total></span> <span>грн.</span></div>
+
+            <div class="orders__btn">
+                <button type="button" class="button" open-popup>Замовити</button>
+            </div>
+
+            <div class="orders__popup">
+                <div class="js-popup popup" orders-form>
+
+                    <button class="popup__close" type="button" popup-close>close</button>
+
+                    <div class="popup__content">
+                       <div class="orders__form">
+                            <label for="name">Ваше им'я</label>
+                            <input type="text" name="name" id="name">
+
+                            <label for="phone">Ваше им'я</label>
+                            <input type="tel" name="phone" id="phone">
+
+                            <label for="name">Коментар</label>
+                            <textarea name="comment" id="" cols="30" rows="10"></textarea>
+
+                            <button type="submit" class="button" >Замовити</button>
+                        </div> 
+                    </div>
+                    
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</main>
+
+{% include "layouts/_footer.html" %}
+
+
+
+    <!-- {# mixin example #}
+    {{mixins.icon('facebook')}}
+
+
+    {# data usage example #}
+        {% import "data/data.html" as tests %}
+        
+        {% for test in tests.list %}
+        <li>{{test.title}}</li>
+        {% endfor %}
+        {# end of example #} -->
+
+        {% endblock %}

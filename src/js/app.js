@@ -2,15 +2,17 @@ import animation from './components/animation.js';
 import 'slick-carousel';
 import order from './components/order';
 import Counter from './classes/Counter';
-import Bag from './classes/Bag';
+import initBag from './components/bag';
 
-const elementBag = document.querySelector('.js-bag');
-window.bag = new Bag(elementBag);
-bag.updateLength('orders');
+
+
 const counters = document.querySelectorAll('.js-counter');
-counters.forEach(counter => new Counter(counter));
+if (counters.length) counters.forEach(counter => new Counter(counter));
 
+
+initBag();
 animation();
+order();
 
 $('.js-hero-slider').slick({
   dots: true,
@@ -23,7 +25,3 @@ $('.js-hero-slider').slick({
 $('.js-comments-slider').slick({
   slidesToShow: 4
 });
-
-order();
-
-

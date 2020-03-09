@@ -12,8 +12,8 @@ export default class Bag {
     localStorage.setItem(name, data);
   }
 
-  updateLength(name) {
-    const orderLength = this.getData(name) ? JSON.parse(this.getData(name)).list.length : null;
+  updateLength() {
+    const orderLength = this.getData('orders') ? JSON.parse(this.getData('orders')).list.length : null;
 
     if (orderLength) {
       this.elementBagLength.classList.add('is-show');

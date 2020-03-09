@@ -37,7 +37,7 @@ products: [
         <div class="js-products-animate">
 
             {% for product in products %}
-            <form class="product js-product" data-price="{{product.price}}">
+            <form class="product js-product" data-price="{{product.price}}" data-weight="кг.">
                 <div class="product__inner">
                     <div class="product__image" style="background-image: url('./img/{{product.imgUrl}}');"></div>
 
