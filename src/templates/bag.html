@@ -23,26 +23,35 @@ heroImg: 'cake.png'
             <div class="orders__total">Усього товарів: <span total></span> <span>грн.</span></div>
 
             <div class="orders__btn">
-                <button type="button" class="button" open-popup>Замовити</button>
+                <button type="button" class="button" open-popup>Оформити замовлення</button>
             </div>
 
             <div class="orders__popup">
                 <div class="js-popup popup" orders-form>
-
-                    <button class="popup__close" type="button" popup-close>close</button>
+                    <div class="popup__overflow" popup-overflow></div>
+                    <button class="popup__close" type="button" popup-close title="Закрити">close</button>
 
                     <div class="popup__content">
-                       <div class="orders__form">
-                            <label for="name">Ваше им'я</label>
-                            <input type="text" name="name" id="name">
-
-                            <label for="phone">Ваше им'я</label>
-                            <input type="tel" name="phone" id="phone">
-
-                            <label for="name">Коментар</label>
-                            <textarea name="comment" id="" cols="30" rows="10"></textarea>
-
-                            <button type="submit" class="button" >Замовити</button>
+                       <div class="orders__form form">
+                            <div class="input">
+                                <label for="user_name">Ваше им'я</label>
+                                <input type="text" name="user_name" id="user_name">
+                            </div>
+                            
+                            <div class="input">
+                                <label for="phone">Ваше им'я</label>
+                                <input type="tel" name="phone" id="phone">
+                            </div>
+                            
+                            <div class="textarea">
+                               <label for="name">Коментар</label>
+                                <textarea name="comment"></textarea> 
+                            </div>
+                            
+                            <div class="popup__btn">
+                                <button type="submit" class="button" >Замовити</button>
+                            </div>
+                            
                         </div> 
                     </div>
                     

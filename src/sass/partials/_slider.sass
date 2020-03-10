@@ -96,6 +96,15 @@
 
     & .slick-slide > div
         display: flex
+        
+    +r(1400)
+
+        &__slide
+            height: 400px
+            
+        & .slick-dots
+            position: 
+            bottom: 30px
 
 .slide
     position: relative
@@ -142,3 +151,10 @@
     &__button
         display: flex
         justify-content: center
+        
+    +r(1400)
+
+        &__title
+            font-size: 34px 
+        &__subtitle
+            font-size: 20px 
